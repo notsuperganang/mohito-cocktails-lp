@@ -8,19 +8,17 @@ const navbar = () => {
   useGSAP(() => {
     const navTween = gsap.timeline({
       scrollTrigger: {
-        trigger: 'nav',
-        start: 'bottom top',
+        trigger: '#hero',
+        start: '50px top',
+        toggleActions: 'play none none reverse',
       }
     });
 
-    navTween.fromTo('nav', {
-      backgroundColor: 'transparent',
-    },
-    {
+    navTween.to('nav', {
       backgroundColor: '#00000050',
-      backgroundFilter: 'blur(10px)',
+      backdropFilter: 'blur(10px)',
       ease: 'power1.inOut',
-      duration: 1,
+      duration: 0.5,
     })
   }, [])
 
