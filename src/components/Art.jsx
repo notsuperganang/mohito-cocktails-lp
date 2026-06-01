@@ -30,13 +30,13 @@ const Art = () => {
         .to('.masked-img', {
             scale: 1.3,
             maskPosition: 'center',
-            duration: 1.2,
+            duration: 1,
             ease: 'power1.inOut',
             maskSize: '400%',
         })
         .to('#masked-content', {
             opacity: 1,
-            duration: 1.2,
+            duration: 1,
             ease: 'power1.inOut',
         })
     });
