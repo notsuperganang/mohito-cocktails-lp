@@ -1,6 +1,38 @@
+import { useGSAP } from '@gsap/react'
 import React from 'react'
+import gsap from 'gsap';
+import { SplitText } from 'gsap/all';
 
 function About() {
+
+    useGSAP(() => {
+        const titleSplit = SplitText.create("#about h2", {
+            type: "words",
+        })
+
+        const scrollTimeline = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#about",
+                start: "top center",
+            }
+        })
+
+        scrollTimeline
+        .from(titleSplit.words, {
+            opacity: 0,
+            y: 100,
+            duration: 1,
+            stagger: 0.02,
+            ease: "expo.out",
+        })
+        .from(".top-grid div, .bottom-grid div", {
+            opacity: 0,
+            duration: 1,
+            stagger: 0.04,
+            ease: "power1.inOut",
+        }, '-=0.5')
+    });
+
     return (
         <div id="about">
             <div className='mb-16 md:px-0 px-5'>
