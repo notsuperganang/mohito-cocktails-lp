@@ -76,12 +76,12 @@ const Hero = () => {
 		<h1 className="title">MOJITO</h1>
 		
 		<img
-		 src="/images/hero-left-leaf.png"
+		 src={import.meta.env.BASE_URL + "images/hero-left-leaf.png"}
 		 alt="left-leaf"
 		 className="left-leaf"
 		/>
 		<img
-		 src="/images/hero-right-leaf.png"
+		 src={import.meta.env.BASE_URL + "images/hero-right-leaf.png"}
 		 alt="right-leaf"
 		 className="right-leaf"
 		/>
@@ -115,7 +115,7 @@ const Hero = () => {
 		 muted
 		 playsInline
 		 preload="auto"
-		 src="/videos/output.mp4"
+		 src={import.meta.env.BASE_URL + "videos/output.mp4"}
 		/>
 	 </div>
 	</>

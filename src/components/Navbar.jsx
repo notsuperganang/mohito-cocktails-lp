@@ -26,7 +26,7 @@ const navbar = () => {
     <nav>
       <div>
         <a href="#home" className="flex items-center gap-2">
-          <img src="/images/logo.png" alt="Velvet Pour Logo" />
+          <img src={import.meta.env.BASE_URL + "images/logo.png"} alt="Velvet Pour Logo" />
           <p>Velvet Pour</p>
         </a>
         
