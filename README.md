@@ -1,16 +1,35 @@
-# React + Vite
+# Mohito Cocktails — Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A cocktail landing page built as a learning project for GSAP animations with React.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19** + **Vite**
+- **GSAP** (ScrollTrigger, SplitText, `useGSAP`)
+- **Tailwind CSS v4**
 
-## React Compiler
+## What I Learned
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- GSAP `ScrollTrigger` — scroll-driven animations and pinned sections
+- GSAP `SplitText` — animating text word by word
+- `useGSAP` hook — scoped animations in React components
+- `scrub` — syncing animation progress with scroll position
+- `pin: true` — locking a section during an animation sequence
+- `mix-blend-mode: screen` — blending video on dark backgrounds
+- `overflow-x: clip` vs `hidden` — preventing unwanted scroll containers
 
-## Expanding the ESLint configuration
+## Sections
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Hero** — scroll-driven video scrubbing + parallax leaves
+- **Cocktails** — cocktail list with GSAP entrance animations
+- **About** — image grid layout
+- **Art** — pinned mask reveal animation
+- **Menu** — cocktail slider with slide transitions
+- **Contact** — footer with leaf and drink image animations
+
+## Getting Started
+
+```bash
+npm install
+npm run dev
+```
